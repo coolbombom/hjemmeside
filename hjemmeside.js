@@ -30,7 +30,9 @@ function addEvent(elem, event, fn) {
 }
 
 function setGalleryBoxStyle(){
-    var elem = document.querySelector(".gallery-box").querySelector(".helper-div");
+    var elem = document.querySelector(".gallery-box")
+    if ( ! elem.className.match(/(?:^|\s)MyClass(?!\S)/) ) elem.className = elem.className + "visible";
+    elem = elem.querySelector(".helper-div");
     if (window.innerWidth > 1024) {
        elem.className = elem.className.replace( /(?:^|\s)middle-center(?!\S)/g , '' ) + " middle-left";
     } else {
