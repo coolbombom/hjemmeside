@@ -30,14 +30,14 @@ function addEvent(elem, event, fn) {
 }
 
 function setGalleryBoxStyle(){
-    var elem = document.querySelector(".gallery-box")
-    if ( ! elem.className.match(/(?:^|\s)MyClass(?!\S)/) ) elem.className = elem.className + " visible";
-    elem = elem.querySelector(".helper-div");
+    var elemGB = document.querySelector(".gallery-box")
+    elemHD = elemGB.querySelector(".helper-div");
     if (window.innerWidth > 1024) {
-       elem.className = elem.className.replace( /(?:^|\s)middle-center(?!\S)/g , '' ) + " middle-left";
+       elemHD.className = elemHD.className.replace( /(?:^|\s)middle-center(?!\S)/g , '' ) + " middle-left";
     } else {
-       elem.className = elem.className.replace( /(?:^|\s)middle-left(?!\S)/g , '' ) + " middle-center";
+       elemHD.className = elemHD.className.replace( /(?:^|\s)middle-left(?!\S)/g , '' ) + " middle-center";
     }
+    if ( ! elemGB.className.match(/(?:^|\s)MyClass(?!\S)/) ) elemGB.className = elemGB.className + " visible";
 }
 
 window.onload = function(){
