@@ -30,6 +30,7 @@ function addEvent(elem, event, fn) {
 }
 
 function setGalleryBoxStyle(){
+    if (document.querySelector(".master.container").getAttribute("data-itemname") != "personal") return;
     var elemGB = document.querySelector(".gallery-box")
     elemHD = elemGB.querySelector(".helper-div");
     if (window.innerWidth > 1024) {
