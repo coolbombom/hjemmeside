@@ -36,7 +36,7 @@ window.onload = function(){
           console.debug(elem);
           elem = elem.querySelector(".helper-div");
           console.debug(elem);
-          if (window.width > 1280) {
+          if (window.innerHeight > 1280) {
                elem.className = elem.className.replace( /(?:^|\s)middle-center(?!\S)/g , '' ) + " middle-left";
           } else {
                elem.className = elem.className.replace( /(?:^|\s)middle-left(?!\S)/g , '' ) + " middle-center";
