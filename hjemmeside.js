@@ -33,7 +33,7 @@ window.onload = function(){
 
      addEvent(window, 'resize', function(e){
           var elem = document.querySelector(".gallery-box").querySelector(".helper-div");
-          if (window.innerHeight > 1280) {
+          if (window.innerWidth > 1024) {
                elem.className = elem.className.replace( /(?:^|\s)middle-center(?!\S)/g , '' ) + " middle-left";
           } else {
                elem.className = elem.className.replace( /(?:^|\s)middle-left(?!\S)/g , '' ) + " middle-center";
