@@ -28,15 +28,19 @@ function addEvent(elem, event, fn) {
         elem.attachEvent("on" + event, attachHandler);
     }
 }
+
+function setGalleryBoxStyle(){
+    var elem = document.querySelector(".gallery-box").querySelector(".helper-div");
+    if (window.innerWidth > 1024) {
+       elem.className = elem.className.replace( /(?:^|\s)middle-center(?!\S)/g , '' ) + " middle-left";
+    } else {
+       elem.className = elem.className.replace( /(?:^|\s)middle-left(?!\S)/g , '' ) + " middle-center";
+    }
+}
+
 window.onload = function(){
      document.getElementById("PINTEREST").querySelector("img").src="http://www.ccs.neu.edu/home/amirali/include/black-white-metro-github-icon.png";
 
-     addEvent(window, 'resize', function(e){
-          var elem = document.querySelector(".gallery-box").querySelector(".helper-div");
-          if (window.innerWidth > 1024) {
-               elem.className = elem.className.replace( /(?:^|\s)middle-center(?!\S)/g , '' ) + " middle-left";
-          } else {
-               elem.className = elem.className.replace( /(?:^|\s)middle-left(?!\S)/g , '' ) + " middle-center";
-          }
-     });
+     addEvent(window, 'resize', setGalleryBoxStyle);
+     setGalleryBoxStyle();
 }
