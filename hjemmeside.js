@@ -32,7 +32,7 @@ window.onload = function(){
      document.getElementById("PINTEREST").querySelector("img").src="http://www.ccs.neu.edu/home/amirali/include/black-white-metro-github-icon.png";
 
      addEvent(window, 'resize', function(e){
-          var elem = document.getElementByClassName("gallery-box").getElementByClassName("helper-div");
+          var elem = document.getElementsByClassName("gallery-box").getElementsByClassName("helper-div");
           if (window.width > 1280) {
                elem.className = elem.className.replace( /(?:^|\s)middle-center(?!\S)/g , '' ) + " middle-left";
           } else {
