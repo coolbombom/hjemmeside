@@ -51,4 +51,4 @@ window.onload = function(){
 console.debug(document);
 console.debug(window);
 
-document.parent.getElementsByTagName('head')[0].innerHTML += '<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">';
+window.parent.document.getElementsByTagName('head')[0].innerHTML += '<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">';
