@@ -41,9 +41,9 @@ function setGalleryBoxStyle(){
     if ( ! elemGB.className.match(/(?:^|\s)MyClass(?!\S)/) ) elemGB.className = elemGB.className + " visible";
 }
 
-window.onload = function(){
+$(document).ready(function(){
      document.getElementById("PINTEREST").querySelector("img").src="http://www.ccs.neu.edu/home/amirali/include/black-white-metro-github-icon.png";
 
      addEvent(window, 'resize', setGalleryBoxStyle);
      setGalleryBoxStyle();
-}
+});
